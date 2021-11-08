@@ -1,9 +1,8 @@
 import random
 
 def game():
-  
   while True:
-    user = input("Enter your choice : \n (r for Rock, p for Paper, s for Scissor) || r/p/s => ")
+    user = input("\n \nEnter your choice : \n (r for Rock, p for Paper, s for Scissor) || r/p/s => ")
     user = user.lower()
     if user =="r" or user == "p" or user == "s":
       break
@@ -14,13 +13,13 @@ def game():
   computer = random.choice(["r", "p", "s"])
   
   if user == computer:
-    print (f"\n \nYou and the computer both choose {user}. \n It's a Tie!!")
+    print (f"\n \nYou and the computer both choose {user} \n It's a Tie!!".replace(" s ", " Scissor ").replace(" r ", " Rock ").replace(" p ", " Paper "))
 
   elif (user == "r" and computer == "s") or (user == "s" and computer == "p") or (user == "p" and computer == "r"):
-    print (f"\n \nYou choose {user} over {computer} of computer. \n You Won!!")
+    print (f"\n \nYou choose {user} over {computer} of computer. \n You Won!!".replace(" s ", " Scissor ").replace(" r ", " Rock ").replace(" p ", " Paper "))
   
   else:
-    print (f"\n \nYou choose {user} but computer choose {computer} \n You Lost Sucker!!!")
+    print (f"\n \nYou choose {user} but computer choose {computer} \n You Lost Sucker!!!".replace(" s ", " Scissor ").replace(" r ", " Rock ").replace(" p ", " Paper "))
 
 while True:
   game()
